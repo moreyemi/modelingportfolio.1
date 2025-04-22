@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Model Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RyK1T3u+bPzD7YkDkD/vhFY03L/mHhBokxKgfEUMAXKiM+q4AoA8VRTZ+Z3YBG4Zs3BzUXcMCZ+eGRgN1/Y7Jw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url(images/bg/cherry-laithang-NmPpz1jA_JE-unsplash.jpg) center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+    }
+
+    header .overlay {
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    header h1{
+      background: url(images/bg/jan-kopriva-qYf74z7NBOU-unsplash.jpg) center/cover;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .explore-btn {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: none;
+      border: 2px solid;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      border-image: url(images/bg/jan-kopriva-qYf74z7NBOU-unsplash.jpg) 30 round;
+      color: #f2f2f2;
+      cursor: pointer;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .explore-btn:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about, .contact {
+      background-color: #111;
+      text-align: center;
+      border-radius: 1rem;
+      padding: 3rem 2rem;
+    }
+
+    .about h2, .contact h2, .portfolio h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .about p, .contact p {
+      color: #ccc;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .stats div {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .portfolio h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .grid img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 1rem;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
+      margin-top: 3rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: #fff;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .button:hover {
+      background: url(images/bg/jan-kopriva-qYf74z7NBOU-unsplash.jpg) center/cover;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="overlay">
+      <h1>Hello, I'm Yemi Coker</h1>
+      <p>And this is my Portfolio.</p>
+      <a href="#about"><button class="explore-btn">Explore</button></a>
+    </div>
+  </header>
+
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>I'm a fashion and commercial model based in Lagos-Nigeria, with experience in runway, editorial, and promotional modeling. I'm passionate about storytelling through visual art and always ready for new creative collaborations. Bringing value to your 🫵🏾 Top Class Brand/Message through captivating and unique style.</p>
+    <div class="stats">
+      <div><strong>Height:</strong> 6'2 ft</div>
+      <div><strong>Bust:</strong> 42 in</div>
+      <div><strong>Waist:</strong> 33 in</div>
+      <div><strong>Leg Length:</strong> 43.5 in</div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="polaroids">
+    <h2>Polaroids</h2>
+    <div class="grid">
+      <img src="images/IMG_2117.DNG" alt="Polaroid">
+      <img src="images/IMG_2115.DNG" alt="Polaroid 1">
+      <img src="images/IMG_2119.DNG" alt="Polaroid 3">
+    </div><br><br>
+    <h2>Portfolio</h2>
+    <div class="grid">
+      <img src="images/IMG_2378.JPG" alt="3">  
+      <img src="images/IMG_2322.JPG" alt="1">
+      <img src="images/IMG_2373.PNG" alt="2">
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <a href="mailto:cokeremmanuel23@gmail.com">
+        <i class="fa-solid fa-envelope"></i> cokeremmanuel23@gmail.com
+      </a>
+      <a href="https://wa.me/+239157443579" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> +234-915-744-3579
+      </a>
+      <a href="https://instagram.com/more_yemi" target="_blank">
+        <i class="fa-brands fa-instagram"></i> @more_yemi
+      </a>
+    </div>
+    
+    <a class="button" href="mailto:cokeremmanuel23@gmail.com?subject=Modeling%20Gig&body=Hi%20Yemi%2C%0AI%20would%20like%20to%20book%20you%20for...">Book Me</a>
+  </section>
+
+  <footer>
+    © <script>document.write(new Date().getFullYear());</script> Yemi Coker. All rights reserved.
+  </footer>
+  <div id="image-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:1000;">
+    <img id="overlay-img" src="" style="max-width:90vw; max-height:90vh; border-radius:10px;">
+  </div>
+  <script>
+    const overlay = document.getElementById('image-overlay');
+    const overlayImg = document.getElementById('overlay-img');
+  
+    document.querySelectorAll('.grid img').forEach(img => {
+      img.addEventListener('click', () => {
+        overlay.style.display = 'flex';
+        overlayImg.src = img.src;
+      });
+    });
+  
+    overlay.addEventListener('click', (e) => {
+      if (e.target !== overlayImg) {
+        overlay.style.display = 'none';
+        overlayImg.src = '';
+      }
+    });
+  </script>    
+</body>
+</html>
